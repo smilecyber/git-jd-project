@@ -2,6 +2,8 @@ package cydeo.entity;
 
 import lombok.Data;
 
+import java.util.UUID;
+
 @Data
 public class Program {
     private Integer id;
@@ -9,7 +11,11 @@ public class Program {
     private String programName;
     //some work here
     private String programDetails;
+    private UUID externalProgramId;
     private String published;
-    //some code here
+
+    public String retrieveProgramDetails(){
+        return programCode + " " + programDetails;
+    }
 }
 
